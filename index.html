@@ -16,39 +16,41 @@
         /* HEADER */
        .header-bar {
     background: linear-gradient(90deg, #0b2e5a, #1e6fd9);
-    padding: 14px 20px;
+    padding: 0 20px; /* jarak kiri & kanan SAMA */
+    height: 56px;
+
+    display: flex;
+    align-items: center; /* ✅ CENTER VERTIKAL */
+    justify-content: space-between;
+
     border-bottom-left-radius: 22px;
     border-bottom-right-radius: 22px;
-
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
 }
 
-        .navbar-brand {
-            color: white;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 18px;
-        }
+/* Judul kiri */
+.header-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    line-height: 1; /* penting biar center vertikal presisi */
+}
 
-        .navbar-brand:hover {
-            text-decoration: underline;
-        }
+/* Hamburger kanan */
+.hamburger {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
-        /* HAMBURGER */
-        .hamburger {
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: white;
-            margin: 4px 0;
-            border-radius: 2px;
-        }
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    margin: 4px 0;
+}
 
         /* SIDEBAR */
         .side-menu {
@@ -113,19 +115,15 @@
 
 <!-- HEADER -->
 <nav class="header-bar">
-    <!-- spacer kiri (penyeimbang hamburger kanan) -->
-    <div style="width:22px;"></div>
+    <a href="#home" class="header-title">About Evan</a>
 
-    <!-- Teks center presisi -->
-    <a href="#home" class="navbar-brand text-center">About Evan</a>
-
-    <!-- Hamburger kanan -->
-    <div class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
 </nav>
+
 
 <!-- SIDEBAR -->
 <div class="side-menu" id="sideMenu">
@@ -163,4 +161,5 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
