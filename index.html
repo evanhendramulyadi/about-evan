@@ -14,15 +14,16 @@
         }
 
         /* HEADER */
-        .header-bar {
-            background: linear-gradient(90deg, #0b2e5a, #1e6fd9);
-            padding: 14px 20px;
-            border-bottom-left-radius: 22px;
-            border-bottom-right-radius: 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+       .header-bar {
+    background: linear-gradient(90deg, #0b2e5a, #1e6fd9);
+    padding: 14px 20px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
 
         .navbar-brand {
             color: white;
@@ -112,8 +113,13 @@
 
 <!-- HEADER -->
 <nav class="header-bar">
-    <a href="#home" class="navbar-brand">About Evan</a>
+    <!-- spacer kiri (penyeimbang hamburger kanan) -->
+    <div style="width:22px;"></div>
 
+    <!-- Teks center presisi -->
+    <a href="#home" class="navbar-brand text-center">About Evan</a>
+
+    <!-- Hamburger kanan -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -157,3 +163,4 @@ function toggleMenu() {
 
 </body>
 </html>
+
