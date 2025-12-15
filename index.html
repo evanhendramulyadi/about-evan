@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Evan</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Navbar */
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Custom hamburger */
+        .custom-toggler {
+            width: 22px;
+            height: 2px;
+            background-color: white;
+            display: block;
+            margin: 4px 0;
+        }
+
+        /* Paragraf */
+        .about-text {
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 1.8;
+        }
+
+        main.container {
+            max-width: 850px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-primary rounded-bottom-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span class="navbar-brand fw-semibold">About Evan</span>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#menuOffcanvas"
+                aria-controls="menuOffcanvas">
+            <span class="custom-toggler"></span>
+            <span class="custom-toggler"></span>
+            <span class="custom-toggler"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- OFFCANVAS MENU (KANAN) -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a href="index.html" class="nav-link fs-5">Home</a>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<!-- CONTENT -->
+<main class="container py-4">
+    <div class="text-center">
+        <h1 class="fw-bold mb-3">Evan Hendra Mulyadi</h1>
+
+        <!-- FOTO -->
+        <img src="img/foto-evan.jpeg"
+             alt="Foto Evan"
+             class="img-fluid rounded-4 shadow mb-4"
+             style="max-width: 220px;">
+
+        <p class="about-text text-secondary">
+            Saya, Evan Hendra Mulyadi, adalah pelajar SMK yang secara aktif membangun diri
+            di bidang teknologi, bisnis digital, dan pengembangan personal. Saya memiliki
+            ketertarikan kuat pada AI, IT, dan crypto, serta mulai membangun personal
+            branding sejak usia muda. Saya terbiasa belajar secara mandiri, mengelola
+            proyek dan konten sendiri, serta menyusun sistem kerja yang berfokus pada
+            progres jangka panjang, konsistensi, dan peningkatan kualitas diri dari waktu
+            ke waktu.
+        </p>
+
+        <p class="about-text text-secondary mt-3">
+            Selain di ranah digital, saya juga berkomitmen pada pengembangan fisik dan
+            mental. Saya aktif berlatih gym, boxing, dan arm wrestling sebagai bagian dari
+            disiplin hidup dan pembentukan karakter. Di dunia esports, saya menekuni
+            Mobile Legends dengan target menjadi pemain profesional.
+        </p>
+    </div>
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
