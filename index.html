@@ -108,7 +108,7 @@
 
 <!-- HEADER -->
 <nav class="navbar d-flex justify-content-between">
-    <div class="navbar-brand" onclick="goHome()">About Evan</div>
+    <a href="#home" class="navbar-brand">About Evan</a>
 
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
@@ -120,8 +120,9 @@
 <!-- SIDEBAR -->
 <div class="side-menu" id="sideMenu">
     <div class="close-btn" onclick="toggleMenu()">×</div>
-    <h5>Menu</h5>
-    <a href="#" onclick="goHome()">Home</a>
+
+    <a class="menu-item menu-title">Menu</a>
+    <a href="#home" class="menu-item" onclick="toggleMenu()">Home</a>
 </div>
 
 <!-- CONTENT -->
@@ -152,3 +153,4 @@
 
 </body>
 </html>
+
