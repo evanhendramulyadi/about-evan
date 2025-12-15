@@ -10,79 +10,83 @@
 
     <style>
         body {
-            background-color: #e0e0e0;
+            background-color: #e6e6e6;
         }
 
         /* HEADER */
-        .navbar {
-            background-color: #0b3a73;
-            padding: 12px 20px;
+        .header-bar {
+            background: linear-gradient(90deg, #0b2e5a, #1e6fd9);
+            padding: 14px 20px;
+            border-bottom-left-radius: 22px;
+            border-bottom-right-radius: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .navbar-brand {
-            color: #fff;
+            color: white;
             font-weight: 600;
-            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
         }
 
         .navbar-brand:hover {
-            color: #fff;
+            text-decoration: underline;
         }
 
         /* HAMBURGER */
         .hamburger {
-            width: 28px;
             cursor: pointer;
         }
 
         .hamburger span {
             display: block;
-            height: 3px;
+            width: 22px;
+            height: 2px;
             background: white;
-            margin: 5px 0;
+            margin: 4px 0;
             border-radius: 2px;
         }
 
-        /* SIDEBAR MENU */
+        /* SIDEBAR */
         .side-menu {
             position: fixed;
             top: 0;
             right: -220px;
             width: 220px;
             height: 100%;
-            background: #ffffff;
+            background: white;
             padding: 20px;
             transition: right 0.3s ease;
-            z-index: 1050;
-            box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+            z-index: 1000;
         }
 
         .side-menu.active {
             right: 0;
         }
 
-        .side-menu h5 {
-            margin-bottom: 20px;
-            font-weight: 700; /* Menu bold */
-        }
-
-        .side-menu a {
+        .menu-item {
             display: block;
+            font-size: 16px;
             padding: 10px 0;
-            font-size: 16px; /* SAMA dengan Menu */
-            font-weight: 400; /* Home normal */
             color: #000;
             text-decoration: none;
         }
 
-        .side-menu a:hover {
-            text-decoration: underline;
+        .menu-title {
+            font-weight: 700;
+        }
+
+        .menu-item:not(.menu-title) {
+            font-weight: 400;
         }
 
         .close-btn {
-            font-size: 24px;
-            cursor: pointer;
             text-align: right;
+            font-size: 22px;
+            cursor: pointer;
+            margin-bottom: 15px;
         }
 
         /* CONTENT */
@@ -92,8 +96,8 @@
 
         .profile-img {
             display: block;
-            margin: 20px auto;
-            width: 210px; /* FOTO DIPERBESAR SEDIKIT */
+            margin: 22px auto;
+            width: 220px;
             border-radius: 18px;
         }
 
@@ -107,7 +111,7 @@
 <body>
 
 <!-- HEADER -->
-<nav class="navbar d-flex justify-content-between">
+<nav class="header-bar">
     <a href="#home" class="navbar-brand">About Evan</a>
 
     <div class="hamburger" onclick="toggleMenu()">
@@ -126,31 +130,30 @@
 </div>
 
 <!-- CONTENT -->
-<div class="container content" id="home">
+<div id="home" class="container content">
     <h1 class="text-center fw-bold">Evan Hendra Mulyadi</h1>
 
     <img src="img/foto-evan.jpeg" alt="Foto Evan" class="profile-img">
 
     <p class="about-text">
-        Saya, Evan Hendra Mulyadi, adalah pelajar SMK yang secara aktif membangun diri di bidang teknologi digital dan pengembangan personal. Saya memiliki ketertarikan kuat pada AI, IT, dan crypto, serta mulai membangun personal branding sejak usia muda. Saya terbiasa belajar secara mandiri, mengelola proyek sendiri, serta menyusun sistem kerja yang berfokus pada progres jangka panjang, konsistensi, dan peningkatan kualitas diri dari waktu ke waktu.
+        Saya, Evan Hendra Mulyadi, adalah pelajar SMK yang secara aktif membangun diri
+        di bidang teknologi digital dan pengembangan personal. Saya memiliki ketertarikan
+        kuat pada AI, IT, dan crypto, serta mulai membangun personal branding sejak usia muda.
+        Saya terbiasa belajar secara mandiri dan menyusun sistem kerja berorientasi progres.
     </p>
 
     <p class="about-text">
-        Selain di ranah digital, saya juga berkomitmen pada pengembangan fisik dan mental. Saya aktif dalam latihan boxing dan arm wrestling sebagai bagian dari disiplin hidup dan pembentukan karakter. Di dunia hiburan digital, saya menekuni Mobile Legends dengan target menjadi pemain profesional.
+        Selain di ranah digital, saya juga berkomitmen pada pengembangan fisik dan mental.
+        Saya aktif dalam latihan boxing dan arm wrestling sebagai bagian dari disiplin hidup
+        dan pembentukan karakter.
     </p>
 </div>
 
 <script>
-    function toggleMenu() {
-        document.getElementById("sideMenu").classList.toggle("active");
-    }
-
-    function goHome() {
-        document.getElementById("sideMenu").classList.remove("active");
-        document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-    }
+function toggleMenu() {
+    document.getElementById("sideMenu").classList.toggle("active");
+}
 </script>
 
 </body>
 </html>
-
