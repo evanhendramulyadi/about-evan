@@ -10,7 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
+            display: flex;
+            flex-direction: column;
             background-color: #e6e6e6;
         }
 
@@ -30,10 +37,9 @@
             position: fixed; /* nempel di atas */
             top: 0;
             width: 100%;
-            z-index: 1000; /* selalu di atas konten */
+            z-index: 1000;
         }
 
-        /* Judul kiri */
         .header-title {
             color: white;
             font-weight: 600;
@@ -42,7 +48,6 @@
             line-height: 1;
         }
 
-        /* Hamburger kanan */
         .hamburger {
             background: none;
             border: none;
@@ -106,7 +111,8 @@
 
         /* CONTENT */
         .content {
-            padding: 100px 20px 40px 20px; /* top padding supaya konten nggak tertutup header */
+            flex: 1; /* biar expand ke sisa layar */
+            padding: 100px 20px 40px 20px; /* top padding header */
         }
 
         .profile-img {
@@ -119,6 +125,18 @@
         .about-text {
             text-align: justify;
             text-indent: 2em;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 16px 0;
+            color: #ffffffcc;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -169,17 +187,7 @@
     </div> <!-- tutup div konten -->
 
     <!-- FOOTER PROFESIONAL -->
-    <footer style="
-    text-align: center; 
-    padding: 16px 0; 
-    color: #ffffffcc; 
-    background: rgba(0,0,0,0.3); 
-    backdrop-filter: blur(5px); 
-    border-top-left-radius: 12px; 
-    border-top-right-radius: 12px; 
-    font-size: 0.9rem;
-    margin-top: 40px;
-">
+    <footer>
         &copy; 2026 Evan Hendra Mulyadi. All Rights Reserved.
     </footer>
 
