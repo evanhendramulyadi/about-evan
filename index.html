@@ -18,16 +18,19 @@
         .header-bar {
             background: linear-gradient(90deg, #0b2e5a, #1e6fd9);
             padding: 0 20px;
-            /* jarak kiri & kanan SAMA */
             height: 56px;
 
             display: flex;
             align-items: center;
-            /* ✅ CENTER VERTIKAL */
             justify-content: space-between;
 
             border-bottom-left-radius: 22px;
             border-bottom-right-radius: 22px;
+
+            position: fixed; /* nempel di atas */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* selalu di atas konten */
         }
 
         /* Judul kiri */
@@ -37,7 +40,6 @@
             font-size: 1.1rem;
             text-decoration: none;
             line-height: 1;
-            /* penting biar center vertikal presisi */
         }
 
         /* Hamburger kanan */
@@ -94,20 +96,17 @@
         .close-btn {
             text-align: right;
             font-size: 36px;
-            /* ukuran jelas */
             font-weight: 700;
             cursor: pointer;
             line-height: 1;
             margin-bottom: 22px;
             user-select: none;
-
-            /* biar tap di HP enak */
             padding: 6px;
         }
 
         /* CONTENT */
         .content {
-            padding: 40px 20px;
+            padding: 100px 20px 40px 20px; /* top padding supaya konten nggak tertutup header */
         }
 
         .profile-img {
@@ -137,7 +136,6 @@
         </button>
     </nav>
 
-
     <!-- SIDEBAR -->
     <div class="side-menu" id="sideMenu">
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
@@ -152,25 +150,26 @@
         <img src="img/foto-evan.jpeg" alt="Foto Evan" class="profile-img">
 
         <p class="about-text">
-            Saya, Evan Hendra Mulyadi, adalah pelajar SMK yang secara aktif membangun diri
-            di bidang teknologi digital dan pengembangan personal. Saya memiliki ketertarikan
-            kuat pada AI, IT, dan crypto, serta mulai membangun personal branding sejak usia muda.
-            Saya terbiasa belajar secara mandiri dan menyusun sistem kerja berorientasi progres.
+            Saya, Evan Hendra Mulyadi, adalah seseorang yang aktif
+            mengembangkan diri di bidang teknologi digital dan pengembangan
+            pribadi, dengan minat yang kuat pada AI, IT, dan Crypto. Saya
+            terbiasa belajar mandiri, menyusun sistem kerja yang
+            berorientasi pada hasil, dan selalu berusaha meningkatkan
+            disiplin serta konsistensi dalam setiap kegiatan
         </p>
 
         <p class="about-text">
-            Selain di ranah digital, saya juga berkomitmen pada pengembangan fisik dan mental.
-            Saya aktif berlatih gym, boxing, dan arm wrestling sebagai bagian dari disiplin hidup
-            dan pembentukan karakter. Di dunia esports, saya menekuni Mobile Legends dengan target
-            menjadi pemain profesional, sambil terus mengasah fokus, strategi, dan mental
-            kompetitif. Prinsip hidup saya sederhana: perbaiki diri setiap hari, bangun fondasi
-            yang kuat sejak dini, dan biarkan hasil besar datang sebagai konsekuensi dari proses
-            yang dijalani dengan serius.
+            Di luar ranah digital, saya juga menekuni pengembangan fisik
+            dan mental melalui kegiatan seperti gym, boxing, dan arm
+            wrestling, sebagai bagian dari membangun karakter yang kuat.
+            Prinsip saya sederhana: perbaiki diri setiap hari, bangun
+            fondasi yang solid, dan biarkan hasil besar muncul sebagai
+            konsekuensi dari proses yang dijalani dengan serius.
         </p>
     </div> <!-- tutup div konten -->
 
     <!-- FOOTER PROFESIONAL -->
-<footer style="
+    <footer style="
     text-align: center; 
     padding: 16px 0; 
     color: #ffffffcc; 
@@ -181,10 +180,10 @@
     font-size: 0.9rem;
     margin-top: 40px;
 ">
-    &copy; 2026 Evan Hendra Mulyadi. All Rights Reserved.
-</footer>
+        &copy; 2026 Evan Hendra Mulyadi. All Rights Reserved.
+    </footer>
 
-<script>
+    <script>
         function toggleMenu() {
             document.getElementById("sideMenu").classList.toggle("active");
         }
