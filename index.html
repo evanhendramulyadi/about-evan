@@ -12,7 +12,8 @@
 
     <style>
         /* BODY DAN FLEX LAYOUT */
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
         }
@@ -20,8 +21,40 @@
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* penting agar footer terdorong ke bawah */
+            min-height: 100vh;
+            /* penting agar footer terdorong ke bawah */
             background-color: #e6e6e6;
+        }
+
+        /* NAVBAR DESKTOP */
+        .nav-desktop {
+            display: none;
+            gap: 20px;
+        }
+
+        .nav-desktop a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVE */
+        @media (min-width: 768px) {
+
+            /* tampilkan navbar */
+            .nav-desktop {
+                display: flex;
+            }
+
+            /* sembunyikan hamburger */
+            .hamburger {
+                display: none;
+            }
+
+            /* sembunyikan sidebar */
+            .side-menu {
+                display: none;
+            }
         }
 
         /* HEADER */
@@ -34,7 +67,8 @@
             justify-content: space-between;
             border-bottom-left-radius: 22px;
             border-bottom-right-radius: 22px;
-            position: fixed; /* selalu di atas */
+            position: fixed;
+            /* selalu di atas */
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -111,8 +145,10 @@
 
         /* CONTENT */
         .content {
-            flex: 1; /* agar expand ke sisa layar */
-            padding: 100px 20px 40px 20px; /* top padding header */
+            flex: 1;
+            /* agar expand ke sisa layar */
+            padding: 100px 20px 40px 20px;
+            /* top padding header */
         }
 
         .profile-img {
@@ -147,6 +183,12 @@
     <nav class="header-bar">
         <a href="#home" class="header-title">About Evan</a>
 
+        <!-- NAVBAR DESKTOP -->
+        <div class="nav-desktop">
+            <a href="#home">Home</a>
+        </div>
+
+        <!-- HAMBURGER (MOBILE) -->
         <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
             <span></span>
             <span></span>
@@ -154,6 +196,7 @@
         </button>
     </nav>
 
+    
     <!-- SIDEBAR -->
     <div class="side-menu" id="sideMenu">
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
@@ -168,11 +211,17 @@
         <img src="img/foto-evan.jpeg" alt="Evan's photo" class="profile-img">
 
         <p class="about-text">
-            I, Evan Hendra Mulyadi, am someone who actively develops myself in the field of digital technology and personal development, with strong interests in AI, IT, and Crypto. I am accustomed to self-directed learning, building result-oriented work systems, and continuously striving to improve discipline and consistency in every activity.
+            I, Evan Hendra Mulyadi, am someone who actively develops myself in the field of digital technology and
+            personal development, with strong interests in AI, IT, and Crypto. I am accustomed to self-directed
+            learning, building result-oriented work systems, and continuously striving to improve discipline and
+            consistency in every activity.
         </p>
 
         <p class="about-text">
-            Outside the digital field, I also focus on physical and mental development through activities such as home workouts, boxing, and arm wrestling, as part of building a strong character. My principle is simple: improve yourself every day, build a solid foundation, and let significant results emerge as a consequence of a process that is pursued seriously.
+            Outside the digital field, I also focus on physical and mental development through activities such as home
+            workouts, boxing, and arm wrestling, as part of building a strong character. My principle is simple: improve
+            yourself every day, build a solid foundation, and let significant results emerge as a consequence of a
+            process that is pursued seriously.
         </p>
     </div>
 
