@@ -47,6 +47,6 @@ To run or inspect this project locally:
 
 ## Copyright and Ownership
 
-© 2026 Evan Hendra Mulyadi. All Rights Reserved.
+© 2026–Present Evan Hendra Mulyadi. All Rights Reserved.
 
 This repository is publicly accessible solely for viewing, studying, and reviewing the source code. Public access does not grant permission to copy the entire project, rebrand or rename it, remove attribution, or claim it as your own work. No open-source license or reuse permission is granted without explicit written consent from the owner.
