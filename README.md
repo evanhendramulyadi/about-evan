@@ -2,7 +2,7 @@
   <img src="img/logo-about-evan.png" alt="About Evan Logo" width="100">
 </p>
 
-<h1 align="center">About Evan</h1>
+<h1 align="left">About Evan</h1>
 
 A personal portfolio and profile website highlighting the background, interests, and digital journey of Evan Hendra Mulyadi.
 
