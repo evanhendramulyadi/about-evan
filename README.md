@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/logo-about-evan.png" alt="About Evan Logo" width="100">
+  <img src="img/about-evan-logo.png" alt="About Evan Logo" width="100">
 </p>
 
 <h1 align="left">About Evan</h1>
