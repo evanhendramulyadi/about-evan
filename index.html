@@ -32,7 +32,8 @@
             gap: 20px;
         }
 
-        .nav-desktop a {
+        .nav-desktop a,
+        .nav-desktop span {
             color: white;
             text-decoration: none;
             font-weight: 500;
@@ -181,11 +182,11 @@
 
     <!-- HEADER -->
     <nav class="header-bar">
-        <a href="#home" class="header-title">About Evan</a>
+        <span class="header-title">About Evan</span>
 
         <!-- DESKTOP NAVBAR -->
         <div class="nav-desktop">
-            <a href="#home">Home</a>
+            <span>Home</span>
         </div>
 
         <!-- HAMBURGER (MOBILE) -->
@@ -200,12 +201,12 @@
     <!-- SIDEBAR -->
     <div class="side-menu" id="sideMenu">
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
-        <a class="menu-item menu-title"><strong>Menu</strong></a>
-        <a href="#home" class="menu-item" onclick="toggleMenu()">Home</a>
+        <span class="menu-item menu-title"><strong>Menu</strong></span>
+        <span class="menu-item">Home</span>
     </div>
 
     <!-- CONTENT -->
-    <div id="home" class="container content">
+    <div class="container content">
         <h1 class="text-center fw-bold">Evan Hendra Mulyadi</h1>
 
         <img src="img/evan-photo.jpeg" alt="Photo of Evan Hendra Mulyadi" class="profile-img">
