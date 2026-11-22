@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* BODY DAN FLEX LAYOUT */
+        /* BODY AND FLEX LAYOUT */
         html,
         body {
             height: 100%;
@@ -22,11 +22,11 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            /* penting agar footer terdorong ke bawah */
+            /* Push footer to the bottom */
             background-color: #e6e6e6;
         }
 
-        /* NAVBAR DESKTOP */
+        /* DESKTOP NAVBAR */
         .nav-desktop {
             display: none;
             gap: 20px;
@@ -41,17 +41,17 @@
         /* RESPONSIVE */
         @media (min-width: 768px) {
 
-            /* tampilkan navbar */
+            /* Show navbar */
             .nav-desktop {
                 display: flex;
             }
 
-            /* sembunyikan hamburger */
+            /* Hide hamburger */
             .hamburger {
                 display: none;
             }
 
-            /* sembunyikan sidebar */
+            /* Hide sidebar */
             .side-menu {
                 display: none;
             }
@@ -68,7 +68,7 @@
             border-bottom-left-radius: 22px;
             border-bottom-right-radius: 22px;
             position: fixed;
-            /* selalu di atas */
+            /* Always on top */
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -146,9 +146,9 @@
         /* CONTENT */
         .content {
             flex: 1;
-            /* agar expand ke sisa layar */
+            /* Expand to fill available height */
             padding: 100px 20px 40px 20px;
-            /* top padding header */
+            /* Top padding for header */
         }
 
         .profile-img {
@@ -183,7 +183,7 @@
     <nav class="header-bar">
         <a href="#home" class="header-title">About Evan</a>
 
-        <!-- NAVBAR DESKTOP -->
+        <!-- DESKTOP NAVBAR -->
         <div class="nav-desktop">
             <a href="#home">Home</a>
         </div>
@@ -227,7 +227,7 @@
         </p>
     </div>
 
-    <!-- FOOTER PROFESIONAL -->
+    <!-- FOOTER -->
     <footer>
         &copy; 2026–Present Evan Hendra Mulyadi. All Rights Reserved.
     </footer>
